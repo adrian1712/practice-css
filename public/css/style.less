@@ -1,44 +1,122 @@
+
 @color-01: #444444;
 @color-02: #39809e;
+@color-03: #cccccc;
+@color-04: #bad2a3;
+@color-05: #999999;
 
-
-body{
+body {
     color: @color-01;
-}
-.site-info {
-    // border: 5px dotted red;
-    .logo {
-        // border: 5px dotted green;
-        display: table-cell;
-        width: 100%;
-        font-size: 25px;
-        span{ color: @color-02;
-        }
-        h1 {
-            margin-bottom: 0px;
-        }
-    }
-    .search {
-        // border: 5px dotted blue;
-        display: table-cell;
-    }
-    .small {
-        font-size: 12px;
-        margin-top: 0px;
-    }
+    font-family: 'Muli';
 }
 
 .page {
     // border: 1px dotted red;
-    max-width: 965px;
     margin: auto;
+    max-width: 965px;
 }
+
+.site-info {
+    // border: 5px dotted red;
+
+    .logo {
+        // border: 5px dotted blue;
+        display: table-cell;
+        width: 100%;
+
+        span {
+            color: @color-02;
+        }
+
+        h1 {
+            // border: 1px dotted red;
+            font-size: 50px;
+            margin-bottom: 0;
+        }
+
+        p {
+            // border: 1px dotted red;
+            font-size: 12px;
+            margin-top: 0;
+        }
+    }
+
+    .search {
+        // border: 5px dotted green;
+        display: table-cell;
+
+        input {
+            border: 1px solid @color-03;
+            border-radius: 3px;
+            padding: 5px;
+        }
+    }
+}
+
+.row {
+    // border: 5px dotted red;
+    border-bottom: 5px solid @color-03;
+    overflow: auto;
+    margin-top: 40px;
+    padding-bottom: 30px;
+
+    .column {
+        // border: 1px dotted blue;
+        box-sizing: border-box;
+        float: left;
+        min-height: 50px;
+        width: 25%;
+
+        a {
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: @color-02;
+        }
+
+        a:hover {
+            color: @color-04;
+        }
+
+        .product {
+            text-align: center;
+
+            h3 {
+                // border: 1px dotted red;
+                font-size: 14px;
+            }
+        }
+
+        .info {
+            h3 {
+                font-size: 16px;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 25px;
+            }
+        }
+    }
+}
+.cart {
+    // border: 1px dotted blue;
+    // background-color: red;
+    text-align: right;
+    color: @color-05;
+    padding-right: 125px;
+    margin-top: 20px;
+    padding-bottom: 15px
+}
+
+// Pre-compiled  / less css
 nav {
     // border: 1px dotted blue;
     overflow: auto;
+
     a {
         // border: 1px dotted red;
-        // border-bottom: 5px solid blue;
         display: block;
         float: left;
         font-size: 13px;
@@ -47,17 +125,23 @@ nav {
         padding-left: 0px;
         padding-right: 0px;
         text-decoration: none;
+    }
 
-    }
-    a:hover {
-        color: green;
-    }
     a:visited {
         color: @color-01;
     }
 
+    a:hover {
+        color: @color-04;
+    }
+
     .active {
         border-bottom: 5px solid @color-02;
-        color: @color-02 !important
+        color: @color-02 !important;
     }
+}
+.footer {
+    // border: 2px dotted red;
+    font-size: 12px;
+    color: @color-02
 }
